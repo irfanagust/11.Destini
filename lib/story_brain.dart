@@ -66,24 +66,18 @@ class StoryBrain{
     if (_storyNumber >=3) {
       restart();
     } else {
-      if (choiceNumber==1) {
+      if (_storyNumber == 0 && choiceNumber == 1) {
         _storyNumber = 2;
-        if (_storyNumber==0) {
-          print(_storyNumber);
-        } else if(_storyNumber==1) {
-          _storyNumber = 2;
-        } else if(_storyNumber==2) {
-          _storyNumber = 5;
-        }
-      } else {
-        print(_storyNumber);
-        if (_storyNumber==0) {
-          _storyNumber = 1;  
-        } else if(_storyNumber==1) {
-          _storyNumber = 3;
-        } else if(_storyNumber==2) {
-          _storyNumber = 4;
-        }
+      } else if(_storyNumber == 0 && choiceNumber == 2){
+        _storyNumber = 1;
+      } else if(_storyNumber == 1 && choiceNumber == 1){
+        _storyNumber = 2;
+      } else if(_storyNumber == 1 && choiceNumber == 2){
+        _storyNumber = 3;
+      } else if(_storyNumber == 2 && choiceNumber == 1){
+        _storyNumber = 5;
+      } else if(_storyNumber == 2 && choiceNumber == 2){
+        _storyNumber = 4;
       }
     }
   }
